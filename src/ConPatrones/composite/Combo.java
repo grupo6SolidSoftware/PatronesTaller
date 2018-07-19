@@ -27,12 +27,10 @@ public class Combo implements Comida{
     }
    
     
-    @Override
     public void add(Comida comida) {
         this.combos.add(comida);
     }
 
-    @Override
     public void remove(Comida comida) {
         this.combos.remove(comida);
     }
