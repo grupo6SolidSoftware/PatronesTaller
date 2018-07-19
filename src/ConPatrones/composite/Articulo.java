@@ -28,4 +28,8 @@ public class Articulo implements Comida{
         return precio;
     }
     
+    public String toString(){
+        return nombre;
+    }
+    
 }

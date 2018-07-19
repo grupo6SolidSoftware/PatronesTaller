@@ -13,17 +13,11 @@ import java.util.List;
  * @author Administrador
  */
 public class Combo implements Comida{
-    private String nombre;
-    private String descripcion;
-    private double precio;
-    private String tipo; //Puede ser plato, bebida, botana, combo1, combo2, etc
+
     List<Comida> combos = new ArrayList<Comida>();
 
-    public Combo(String nombre, String descripcion, double precio, String tipo) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.tipo = tipo;
+    public Combo() {
+
     }
    
     
@@ -37,7 +31,19 @@ public class Combo implements Comida{
 
     @Override
     public double getPrecio() {
-        return this.precio;
+        double precio = 0;
+        for(Comida c: combos){
+            precio +=c.getPrecio();
+        }
+        return precio;
+    }
+    
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        for(Comida c: combos){
+            sb.append(c).append(" ");
+        }
+        return sb.toString();
     }
     
 }

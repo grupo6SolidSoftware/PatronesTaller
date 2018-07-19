@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ConPatrones;
+package ConPatrones.factory;
+
+import ConPatrones.composite.Articulo;
+import ConPatrones.composite.Comida;
 
 /**
  *
@@ -11,9 +14,9 @@ package ConPatrones;
  */
 public interface AbstractFatory {
 
-    Articulo fabricarArrozConMenestraYPollo();
+    Comida fabricarArrozConMenestraYPollo();
 
-    Articulo fabricarPolloAsado();
+    Comida fabricarPolloAsado();
 
-    Articulo fabricarArrozConMenestra();
+    Comida fabricarArrozConMenestra();
 }
